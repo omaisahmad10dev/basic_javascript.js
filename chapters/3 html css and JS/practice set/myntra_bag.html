@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="css/practice_set_3.css">
+ 
+  <title>myntra bag exercise</title>
+</head>
+<body>
+
+   <button class="add_to_bag" onclick="
+          cardquantity=cardquantity+1;
+           document.querySelector('#card_summery').innerText=`your bag has  ${cardquantity}  items `;
+           ">Add to Bag</button>
+
+        <button class="whishlish" onclick="
+       cardquantity=cardquantity-1;
+           document.querySelector('#card_summery').innerText=`your bag has  ${cardquantity}  items `;
+        ">💕move to Wishlish</button>
+
+    <button class="add_to_bag" onclick="
+          cardquantity=cardquantity+2;
+           document.querySelector('#card_summery').innerText=`your bag has  ${cardquantity}  items `;
+          ">Add 1+1 sale item</button>
+
+    <h1 id="card_summery"></h1>
+
+    <script>
+      let cardquantity=0;
+      document.querySelector('#card_summery').innerText=`your bag has  ${cardquantity}  items `;
+
+    </script>
+  
+</body>
+</html>
