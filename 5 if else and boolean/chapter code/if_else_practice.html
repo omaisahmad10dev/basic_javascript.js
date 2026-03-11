@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>if else practice</title>
+</head>
+<body>
+  <h1>if else practice</h1>
+
+ 
+    
+  <script>
+    let maths =89;
+    let physics =90;
+    let english=74;
+    
+   let sum = maths+physics+english;
+   console.log(sum);
+
+   let percentage=sum/300*100;
+   console.log ( `${percentage}%`);
+
+   if(maths < 70 || physics< 65 || english < 60){
+    console.log('you have fail');
+   }else if(percentage > 89){
+      // console.log('Grade : A+')
+   }else if(percentage >= 70 ){
+       console.log('Grade : A')
+   }else if (percentage>60){
+     console.log('Grade : B')
+   }else{
+     console.log('Grade : C / pass')
+   }
+    
+    
+    
+  </script>
+</body>
+</html>
