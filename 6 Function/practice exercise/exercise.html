@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>exercise</title>
+</head>
+<body>
+  <script>
+    function isodd(number){
+
+      let rem=number%2;
+      let isodd=rem==1;
+      return isodd;
+    }
+      
+    // console.log(isodd(4));
+    // console.log(isodd(89));
+    // console.log(isodd(5));
+    // console.log(isodd(0));
+    // console.log(isodd(1));    
+
+    function larger(num1, num2){
+      if(num1 > num2){
+        return num1;
+      }else{
+        return num2;
+      }
+    }
+
+
+      // ********TERNARY OPERATOR**********
+      // return num1 > num2 ? num1:num2;
+    // }
+    // console.log(larger(8,3))
+    // console.log(larger(2,3))
+    // console.log(larger(812,3133))
+
+
+    function fahrenheit(celsiusvalue){
+      return 9/5*celsiusvalue+32;
+    }
+
+    console.log(fahrenheit(32))
+    console.log(fahrenheit(0))
+    console.log(fahrenheit(100))
+    console.log(fahrenheit(50))
+  </script>
+  
+</body>
+</html>
