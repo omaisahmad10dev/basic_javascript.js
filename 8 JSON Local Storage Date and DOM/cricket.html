@@ -5,12 +5,26 @@
   <title>cricket</title>
   <style>
     body{
-      text-align: center;
+      text-align: left;
     }
     button{
       font-size: large;
       margin: 1px;
        }
+  
+       #Bat{
+        color: green;
+       }
+       #Ball{
+        color: blue;
+       }
+       #Stump{
+        color: hotpink;
+       }
+       #reset{
+        color: red;
+       }
+      
 
       
     
@@ -19,10 +33,10 @@
 </head>
 <body>
  
-  <h1>Bat Ball Stump Game</h1>
+  <h2>Bat Ball Stump Game</h2>
 
     
-  <button onclick="
+  <button id="Bat" onclick="
   let resultMSG;
  let computerChoice=generatcomputerchoice();
    resultMSG= getResult('Bat' , computerChoice);
@@ -30,7 +44,7 @@
   ">Bat</button>
 
 
-  <button 
+  <button id="Ball"
   onclick="
   computerChoice= generatcomputerchoice();
   resultMSG=getResult('Ball' , computerChoice);
@@ -38,24 +52,47 @@
   ">Ball</button>
 
 
-  <button 
+  <button id="Stump"
    onclick="
   computerChoice= generatcomputerchoice();
   resultMSG=getResult('Stump' , computerChoice);
   showResult('Stump' , computerChoice , resultMSG);
   ">stump</button>
 
+  <button id="reset" onclick="
+    localStorage.clear();
+    resetscore();
+   ">reset</button>
+
 
   <script>
-    let score={
+    let scorestr = localStorage.getItem('score');
+
+    
+    resetscore(scorestr);
+
+    function resetscore(scorestr){
+       let score = scorestr ? JSON.parse(scorestr) : {
             win: 0 ,
             lost: 0 ,
             tie: 0 ,
-        displayscore: function(){
+            
+    }; 
+   
+    score.displayscore= function(){
           return `No of matches won: win:${score.win}, lost: ${score.lost}, tie: ${score.tie}`
-        }
-        
+        };
     };
+    let score = JSON.parse(scorestr) ||{
+            win: 0 ,
+            lost: 0 ,
+            tie: 0 ,
+            
+    }; 
+   
+    score.displayscore= function(){
+          return `No of matches won: win:${score.win}, lost: ${score.lost}, tie: ${score.tie}`
+        };
 
    function generatcomputerchoice(){
      let randomNumber=Math.random() * 3;
@@ -111,7 +148,9 @@
         
    }
    function showResult(userMove , computerMove , result){
-    // console.log(score)
+
+   localStorage.setItem('score', JSON.stringify(score));
+
     alert(`you have chosen ${userMove} , computerchoice is ${computerMove}     
     
     ${result}
