@@ -4,7 +4,76 @@
   <title>advance</title>
 </head>
 <body>
+  <button id="my-button">click me</button>
   <script>
+
+    // let ButtonElement=document.querySelector('#my-button');
+
+    // let bahaviour=omais=>console.log('I am clicked');
+    // ButtonElement.addEventListener('click' , bahaviour);
+
+    // let newElement=date=>console.log(new Date);
+    //  ButtonElement.addEventListener('click' , newElement);
+
+    // //  ButtonElement.removeEventListener('click' , bahaviour);
+
+    // let hovereffect=()=>console.log(new Date);
+    // ButtonElement.addEventListener('mouseenter' , hovereffect);
+
+
+    
+
+    // ********** For Each Loop **********
+
+      let arr=[1,2,3,4,5,6,7,8,9];
+
+    //   arr.forEach(arr=>console.log(arr)
+    //  );
+
+      arr.forEach(num=>{
+        if(num===5){
+         return;
+        }
+         console.log(`Visited: ${num}`);
+      })
+
+    
+    
+
+    // for(i=0; i<arr.length; i++){
+    //   console.log(arr[i]);
+      
+    // }
+
+    function search(arr, num){
+         for(i=0; i<arr.length; i++){
+      if(arr[i]===num){
+        console.log(`elements found is ${i}`)
+        return;
+      }      
+    }
+    console.log('element was not found');
+    }
+    // search(arr, 9);
+       
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // ****************Anonymous funtion*********
 
     // let sum=function(num1 , num2){
@@ -58,12 +127,12 @@
 
 // SettimeOut & SetInterVal************
 
-      let alarm= ()=> console.log(`subha ho gayi utt gaao ${new Date}`);
+      // let alarm= ()=> console.log(`subha ho gayi utt gaao ${new Date}`);
 
-      // let time=setTimeout(alarm,1000);
-      // console.log(`alarm set with timerId ${time}`);
+    //   let time=setTimeout(alarm,1000);
+    //   console.log(`alarm set with timerId ${time}`);
 
-      // clearTimeout(time);
+    //   clearTimeout(time);
 
     //   let intervalId=setInterval(alarm,1000)
     
