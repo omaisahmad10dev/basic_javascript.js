@@ -189,7 +189,7 @@ header {
     font-weight: 700;
 }
 
-.category-items {
+.category-items,.items_container {
     width: 80%;
     margin: 50px 10%;
     display: flex;
@@ -237,6 +237,7 @@ header {
 
 }
 .item_container{
+    margin: 20px;
         width: 200px;
 
 }
@@ -297,5 +298,6 @@ header {
     padding: 5px 15px;
     cursor: pointer;
     font-size: 20px;
+    
 
 }
