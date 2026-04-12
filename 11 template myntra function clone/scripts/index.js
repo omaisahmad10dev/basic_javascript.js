@@ -1,4 +1,37 @@
-let itemContenarElement = document.querySelector('.items_container');
+ 
+  let bagItem;
+  onLoad();
+  function onLoad(){
+DisplayItemOnHoomePage();
+let bagItemsStr=localStorage.getItem('bagItems');
+bagItem=bagItemsStr ? JSON.parse(bagItemsStr) : [];
+DisplayBagIcon();
+}
+ 
+  function addtoBag(itemId){
+    bagItem.push(itemId);
+    localStorage.setItem('bagItems' , JSON.stringify(bagItem));
+    DisplayBagIcon();
+  }
+ 
+
+  function DisplayBagIcon(){
+    let DisplayItemCountElement=document.querySelector('.bag-Item-count');
+    if(bagItem.length > 0){
+      
+     DisplayItemCountElement.innerText=bagItem.length;
+    DisplayItemCountElement.style.visibility='visible';
+   
+        
+    }else{
+      DisplayItemCountElement.style.visibility='hidden';
+
+    }
+  }
+
+function DisplayItemOnHoomePage() {
+  
+let itemCounterElement = document.querySelector('.items_container');
 let innerHTML='';
 items.forEach(item=>{
   innerHTML+=` 
@@ -14,12 +47,14 @@ items.forEach(item=>{
             <span class="original_price"> Rs ${item.original_price} </span>
             <span class="discount">(${item.Discount}% OFF)</span>
           </div>
-          <button class="btn_add_bag"> Add to Bag</button>
+          <button class="btn_add_bag" onclick="addtoBag(${item.id});"> Add to Bag</button>
         </div>
 
       `
 });
 
-itemContenarElement.innerHTML=innerHTML;
+itemCounterElement.innerHTML=innerHTML;
       // console.log('hellow')
 
+
+};

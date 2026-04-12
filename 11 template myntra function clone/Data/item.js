@@ -1,4 +1,5 @@
 const items=[{
+    id:'001',
     image:'images/1.jpg',
     company:'Carlton London',
     item_name:'Rhodium_Plated CZ Floral Studs',
@@ -12,6 +13,7 @@ const items=[{
   },
   
     {
+        id:'002',
     image:'images/2.jpg',
     company:'CUKOO',
     item_name:'Women Padded Halter Neck Swimming Dress',
@@ -24,6 +26,7 @@ const items=[{
     },
   },
    {
+    id:'003',
     image:'images/3.jpg',
     company:'NUEVOSDAMAS',
     item_name:'Women Red & White Printed A-Line Knee-Length Skirts',
@@ -36,6 +39,7 @@ const items=[{
     },
   },
   {
+    id:'004',
     image:'images/4.jpg',
     company:'ADIDAS',
     item_name:'Indian Cricket ODI Jersey',
@@ -48,6 +52,7 @@ const items=[{
     },
   },
   {
+    id:'005',
     image:'images/5.jpg',
     company:'Roadster',
     item_name:'Pure Cotton T-shirt',
@@ -60,6 +65,7 @@ const items=[{
     },
   },
    {
+    id:'006',
     image:'images/6.jpg',
     company:'Nike',
     item_name:'Men ReactX Running Shoes',
