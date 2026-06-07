@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>practice exercise</title>
+</head>
+<h3 id="Greeting"></h3>
+<body>
+  <script>
+
+    function greedingHours(personName='omais '){
+    let newDate=new Date();
+
+    let hours=newDate.getHours();
+    let hedding=document.querySelector('#Greeting');
+    // let hours=;
+    if(hours >= 5 && hours < 12){
+      hedding.innerText=`good morning ${personName}`;
+    }else if(hours >= 12 && hours < 18){
+      hedding.innerText= `good afternoon${personName}`
+
+    }else{
+      hedding.innerText=`good night${personName}`;
+    }
+    };
+
+    greedingHours('omais ahmad');
+  </script>
+  
+</body>
+</html>
