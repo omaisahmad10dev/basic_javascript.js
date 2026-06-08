@@ -2,12 +2,55 @@
 <html lang="en">
 <head>
   <title>practice exercise</title>
+  <style>
+    #button-pressed{
+      padding: 15px;
+      font-size: 25px;
+    }
+    .js-even{
+        background-color: aqua;
+    }
+    .js-odd{
+        background-color: blue;
+    }
+  </style>
 </head>
 <h3 id="Greeting"></h3>
+<button id="button-pressed" onclick=" buttonPressed();"></button>
 <body>
   <script>
+    let noOfTimeClicked=0;
+    function buttonPressed(){
 
-    function greedingHours(personName='omais '){
+      noOfTimeClicked++;
+     
+      updateButton();
+     
+    }
+    function updateButton(){
+      
+      let button=document.querySelector('#button-pressed');
+         if(noOfTimeClicked % 2==0 ){
+        button.classList.remove('js-odd');
+        button.classList.add('js-even');
+      }else{
+        button.classList.remove('js-even');
+        button.classList.add('js-odd');
+      }
+
+       button.innerText=noOfTimeClicked;
+    }
+    updateButton();
+
+
+
+
+
+
+
+
+
+    function greedingHours(personName=' omais '){
     let newDate=new Date();
 
     let hours=newDate.getHours();
@@ -23,7 +66,8 @@
     }
     };
 
-    greedingHours('omais ahmad');
+    greedingHours(' omais ahmad');
+
   </script>
   
 </body>
