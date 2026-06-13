@@ -23,8 +23,23 @@
   </style>
 </head>
 <body>
-  <button class="button"  onclick="setTimeout(doubleSize , 2000)"> click me</button>
+  <button class="button">click me</button>
   <script>
+    let arr=[1,2,3,4,5];
+    let sum=0;
+    arr.forEach( num=>sum+=num);
+    console.log(sum)
+
+
+
+
+
+
+
+    let buttonElement=document.querySelector('.button');
+    buttonElement.addEventListener('click' , event=>{
+      setTimeout(doubleSize,2000)
+    })
     
     function doubleSize(){
       let buttonElement= document.querySelector('.button');
@@ -44,21 +59,21 @@
 
 
 
-    let multiple=function(num1 , num2){
-      return num1+num2;
-    }
-    console.log(multiple(2,3))
+    // let multiple=function(num1 , num2){
+    //   return num1+num2;
+    // }
+    // console.log(multiple(2,3))
     
 
-    let printGreating=()=>console.log('hellow');
+    // let printGreating=()=>console.log('hellow');
 
-    let runTwice=inputFunction=>{
+    // let runTwice=inputFunction=>{
 
-      inputFunction();
-      inputFunction();
-    }
+    //   inputFunction();
+    //   inputFunction();
+    // }
 
-    runTwice(printGreating);
+    // runTwice(printGreating);
 
 
 
