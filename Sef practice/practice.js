@@ -108,10 +108,7 @@ let cartPrices = [450, 1200, 850, 2300, 950, 5000];
       
 //           console.log('mazboot password')
 //     }
-    
-
-
-// }
+//}
 
 // function clearPassword() {
 //     document.getElementById('password').value='';
@@ -127,7 +124,7 @@ let totalAmount=function withdrawCash(currentBalance,amountToWithdraw) {
       }
   
 };
-totalAmount(1200,100)
+totalAmount(1200,1200)
 
 totalAmount(1200,1210)
 
