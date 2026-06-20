@@ -7,7 +7,6 @@ let gameState={
 function saveGameData(){
   let gameElement=document.querySelector('#displayArea');
   localStorage.setItem('gameProgress' , JSON.stringify(gameState));
-  let data=localStorage.getItem('gameProgress')
   gameElement.innerText=localStorage.getItem('gameProgress');
 
 
@@ -24,4 +23,10 @@ function loadGameData(){
 }
 
 saveGameData();
-loadGameData();
+// loadGameData();
+
+let dostonKiList = ["Omais", "Yaman", "Waseem"];
+
+// Array ko Object mein badla
+let dostonKaObject =Object.assign({},dostonKiList);
+console.log(dostonKaObject);
