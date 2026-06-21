@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Mobile Store Inventory</title>
+</head>
+<body>
+  
+  <script>
+    class MobileStoreInventory {
+      constructor(mobileCompnay , mobileModel , mobilePrice) {
+        this.company=mobileCompnay;
+        this.model=mobileModel;
+        this.price=mobilePrice;
+      }
+     mobileStore(){
+      console.log(`${this.company} ${this.model} ki qeemat Rs. ${this.price}`)
+     }
+
+    }
+
+    let mobile1=new MobileStoreInventory("vivo" , "Vivo V30 Pro" , 13000);
+     let mobile2=new MobileStoreInventory("infinix" , "infinix hot 50 pro+" , 53000);
+     
+    mobile1.mobileStore();
+    mobile2.mobileStore();
+  </script>
+</body>
+</html>
