@@ -1,0 +1,47 @@
+:root {
+  --primary: #2563eb;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --gray: #64748b;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  margin: 0;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.store-header{
+  width: 100%;
+  background-color: rgb(10, 8, 141);
+  margin: 10px;
+  line-height: 60px;
+  text-align: center;
+}
+.logo-area{
+  font-size: 1.5rem; font-weight: bold; cursor: pointer; color: var(--primary);
+}
+.announcement-board {
+  text-align: center;
+  background-color: yellow;
+  margin-right: 30%;
+  margin-left: 30%;
+  position: relative;
+  top: -20px;
+  border-radius: 20px;  
+  
+  transform: perspective(800px) rotateX(20deg);
+  transform-origin: top; 
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+.price-tag{
+  color: red;
+  font-style: italic;
+  font-size: 40px;
+
+}
+#main-heading{
+  margin-left: 10px;
+}
