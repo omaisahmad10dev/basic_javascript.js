@@ -45,3 +45,22 @@ body {
 #main-heading{
   margin-left: 10px;
 }
+#display-item{
+  background-color:darksalmon;
+  color: red;
+  width: 50%;
+  margin: 10px;
+  font-size:x-large;
+
+}
+#button{
+    background-color: rgb(200, 114, 250);
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    color: yellow;
+    font-size: x-large;
+    
+
+
+}
