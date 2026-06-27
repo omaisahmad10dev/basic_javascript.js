@@ -45,22 +45,64 @@ body {
 #main-heading{
   margin-left: 10px;
 }
-#display-item{
-  background-color:darksalmon;
-  color: red;
-  width: 50%;
-  margin: 10px;
-  font-size:x-large;
 
+
+
+#main-container{
+  display: flex; /* Is se dono dabbay aamne-saamne ek line mein aa jayenge */
+  justify-content: space-between; /* Ek left side par ho jayega aur ek right side par */
+  gap: 20px; /* Dono ke darmiyan thoda gap rakhne ke liye */
+  width: 100%;
 }
-#button{
-    background-color: rgb(200, 114, 250);
-    padding: 20px;
-    border: none;
-    cursor: pointer;
-    color: yellow;
-    font-size: x-large;
-    
+
+#display-item {
+  
+  width: 60%; 
+}
+#display-cart {
+  width: 35%;
+}
+#display-item span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  display: inline-block;
+  margin-bottom: 8px;
+  
+}
+
+/* 2️⃣ Add to Cart Buttons ka Style */
+button {
+  background-color: #8e44ad; /* Pyaara purple colour */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  transition: background 0.2s ease;
+}
+
+#button:hover {
+  background-color: #732d91;
+}
 
 
+
+#display-cart h3 {
+  margin: 5px 0;
+  color: #34495e;
+}
+
+/* 4️⃣ Total Bill ka dabba */
+#display-cart h3:last-child {
+  margin-top: 20px;
+  background-color: #ffeaa7; /* Soft yellow */
+  color: #d63031; /* Deep red */
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px dashed #d63031;
 }

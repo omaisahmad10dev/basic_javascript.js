@@ -17,10 +17,11 @@
     for (let i = 0; i < items.length; i++) {
    
     newHTML+=`
+    <div>
       <span id="product"> ${items[i].name} ${items[i].stock}</span><br>
 
       <span><button id="button" onclick="addToCart(${items[i].id});">Add to cart</button></span>
-    
+    </div>
     `
       
     }
@@ -58,7 +59,7 @@
     }
     
       let total=cart.length*ITEMS_PRICE;
-      cartHTML+=`<h3>Total Bill : Rs ${total}</h3>`
+      cartHTML+=`<h3 id="total">Total Bill : Rs ${total}</h3>`
 
     displayCart.innerHTML=cartHTML
 
