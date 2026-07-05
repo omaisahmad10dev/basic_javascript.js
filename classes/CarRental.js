@@ -9,7 +9,7 @@ class car {
   }
   rentOut(){
     if (this.isAvailabel===true) {
-      this.isAvailabel=false;
+      // this.isAvailabel=false;
       console.log(`${this.model} kamyabi se rent par de di gayi hai`)
       }else{
         console.log(`Alert: ${this.model} pehle se booked hai!`)
