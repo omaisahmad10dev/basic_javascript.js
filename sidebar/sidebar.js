@@ -1,5 +1,5 @@
 const sidebar=document.querySelector(".sidebar");
-const sidebarToggleBtn=document.querySelector(".sidebar-toggle");
+const sidebarToggleBtn=document.querySelectorAll(".sidebar-toggle");
 const themeToggleBtn=document.querySelector(".theme-toggle");
 const themeIcon=themeToggleBtn.querySelector(".theme-icon ");
 const searchForm=document.querySelector(".search-form ");
@@ -23,9 +23,11 @@ document.body.classList.toggle("dark-theme" , shouldUseDarkTheme);
 
 
 
-sidebarToggleBtn.addEventListener("click",()=>{
+sidebarToggleBtn.forEach((btn)=>{
+  btn.addEventListener("click",()=>{
   sidebar.classList.toggle("collapsed");
   updateThemeIcon();
+});
 });
 
 
