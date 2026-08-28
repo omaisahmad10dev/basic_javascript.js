@@ -14,7 +14,7 @@ const updateThemeIcon = ()=>{
 // apply dark theme if saved or system prepers
 
 const savedTheme=localStorage.getItem("theme");
-const systemPrepersDark=window.matchMedia("(prepers-color-scheme:Dark)").matches;
+const systemPrepersDark=window.matchMedia("(prefers-color-scheme:Dark)").matches;
 
 const shouldUseDarkTheme=savedTheme==="Dark" || (!savedTheme && systemPrepersDark);
 
