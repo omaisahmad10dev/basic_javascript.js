@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins' , sans-serif;
+}
+body{
+  height: 100vh;
+  background: url("image/coffee-hero-bg.jpg");
+  background-position: center;
+  background-size: cover;
+}
+header{
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding: 20px;
+  width: 100%;
+}
+header .navebar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.navebar .menu-links{
+  display: flex;
+  gap: 40px;
+}
+.navebar a span{
+  color: #c06b3c;
+}
+.navebar a{
+  color: #fff;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navebar a:hover{
+  color: #c06b3c;
+}
+
+
+.hero-section{
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  padding:0 20px;
+}
+.hero-section .content{
+  color: #fff;
+}
+.hero-section .content h1{
+  font-size: 3rem;
+  font-width: 600px;
+}
+.hero-section .content p{
+  font-weight:300;
+  margin-top: 15px;
+  max-width: 600px;
+}
