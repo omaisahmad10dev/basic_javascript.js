@@ -93,3 +93,26 @@
   color: crimson;
   font-weight: 600;
 }
+
+/* menu btn styling */
+.menu-btn{
+  color: #fff;
+  font-weight: 600;
+  font-size: 23px;
+}
+
+
+/* responsive media qurey Start> */
+
+@media screen and (max-width:991px) {
+
+  .max-width{
+  padding: 0 50px;
+}
+.navabar .menu{
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  color: #111;
+}
+}
