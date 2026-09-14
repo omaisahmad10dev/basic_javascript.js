@@ -7,5 +7,9 @@ $(document).ready(function(){
     }
     
   })
+  $('.menu-btn').click(function(){
+    $('.navabar .menu').toggleClass('active')
+    $('.menu-btn i' ).toggleClass('active')
+  })
 
 });
