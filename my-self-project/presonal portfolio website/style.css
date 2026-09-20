@@ -52,7 +52,8 @@ html{
   list-style: none;
   display: inline-block;
 }
-.navabar .menu li a{
+.navabar .menu li a{  
+  display: block;
   color: #fff;
   font-size: 18px;
   font-weight: 600;
@@ -121,6 +122,33 @@ html{
   cursor: pointer;
   display: none;
 }
+.scroll-up-down{
+  position: fixed;
+  background: crimson;
+  height: 45px;
+  width: 42px;
+  text-align: center;
+  right: 30px;
+  bottom: 10px;
+  font-weight: 600;
+  color: #fff;
+  border-radius: 6px;
+  line-height: 45px;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 9999;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+}
+.scroll-up-down.show{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+
+}
+
+
  /* all semililer content styling code */
 .about , .services , .skills ,.teams , .contact{
   font-family: 'Poppins' , sans-serif;
