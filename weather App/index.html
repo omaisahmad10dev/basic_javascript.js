@@ -1,16 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="w-full h-screen bg-rose-300">
-
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="w-full h-screen bg-gradient-to-tr from-slate-600 to-sky-950">
+      <div id="weather-wrapper" class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] w-[400px] h-auto bg-black/30 backdrop-blur-lg p-10 rounded-tr-3xl rounded-bl-3xl">
+        <div>
+          <div id="search">
+            <input type="text" placeholder="Enter city name" />
+            <button>search</button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
