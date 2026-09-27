@@ -24,7 +24,7 @@
               placeholder="Enter city name"
               class="w-full rounded-full px-5 py-2"
             />
-            <button class="bg-white w-11 h-9 rounded-full">
+            <button id="search" class="bg-white w-11 h-9 rounded-full">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
           </div>
@@ -33,25 +33,25 @@
           </div>
         </div>
         <div id="weather" class="flex flex-col items-center justify-center my-5">
-          <div class="flex items-center gap-10 my-8">
-            <img src="images/clouds.png" alt="" width="100px" height="100px" />
+          <div  class="flex items-center gap-10 my-8">
+            <img id="weather-info" src="images/clouds.png" alt="" width="100px" height="100px" />
             <div class="flex flex-col items-center">
-              <span class="text-white font-bold text-4xl">44 °C</span>
-              <span class="text-white">Dubai, AE</span>
+              <span id="weatherhere" class="text-white font-bold text-4xl">44 °C</span>
+              <span id="cityname" class="text-white">Dubai, AE</span>
             </div>
           </div>
           <div class="flex items-center justify-between gap-10">
           <div class="flex items-center gap-3">
             <img src="images/humidity.png" alt="" width="50px" />
             <div class="flex flex-col items-center">
-              <span class="text-yellow-100 font-bold text-2xl">50%</span>
+              <span id="humidity" class="text-yellow-100 font-bold text-2xl">50%</span>
               <span class="text-white">Humidity</span>
             </div>
           </div>
           <div class="flex items-center gap-3">
             <img src="images/wind.png" alt="" width="50px" />
             <div class="flex flex-col items-center">
-              <span class="text-yellow-100 font-bold text-2xl">4 km/h</span>
+              <span id="wind" class="text-yellow-100 font-bold text-2xl">4 km/h</span>
               <span class="text-white">wind speed</span>
             </div>
           </div>
