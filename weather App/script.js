@@ -6,7 +6,7 @@ const apiUrl =
 
 const searchInput = document.querySelector("#search input");
 const searchBtn = document.querySelector("#search button");
-const icon=document.querySelector('#weather-info');
+const icon = document.querySelector("#weather-info");
 
 async function checkWeather(city) {
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
@@ -28,22 +28,20 @@ async function checkWeather(city) {
     document.querySelector("#weather").style.display = "block";
     document.querySelector(".error").style.display = "none";
 
-   if (data.weather[0].main == "Clouds") {
-  icon.src = "./images/clouds.png";
-} else if (data.weather[0].main == "Drizzle") {
-  icon.src = "./images/drizzle.png";
-} else if (data.weather[0].main == "Mist") {
-  icon.src = "./images/mist.png";
-} else if (data.weather[0].main == "Rain") {
-  icon.src = "./images/rain.png";
-} else if (data.weather[0].main == "Snow") {
-  icon.src = "./images/snow.png";
-} else {
-  // Agar "Clear" ho ya koi aur weather ho, default clear icon set hoga
-  icon.src = "./images/clear.png";
-}
-
-    
+    if (data.weather[0].main == "Clouds") {
+      icon.src = "./images/clouds.png";
+    } else if (data.weather[0].main == "Drizzle") {
+      icon.src = "./images/drizzle.png";
+    } else if (data.weather[0].main == "Mist") {
+      icon.src = "./images/mist.png";
+    } else if (data.weather[0].main == "Rain") {
+      icon.src = "./images/rain.png";
+    } else if (data.weather[0].main == "Snow") {
+      icon.src = "./images/snow.png";
+    } else {
+      // Agar "Clear" ho ya koi aur weather ho, default clear icon set hoga
+      icon.src = "./images/clear.png";
+    }
   }
 }
 

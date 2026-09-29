@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -32,35 +32,50 @@
             <h1>please enter correct city</h1>
           </div>
         </div>
-        <div id="weather" class="flex flex-col items-center justify-center my-5">
-          <div  class="flex items-center gap-10 my-8">
-            <img id="weather-info" src="images/clouds.png" alt="" width="100px" height="100px" />
+        <div
+          id="weather"
+          class="flex flex-col items-center justify-center my-5"
+        >
+          <div class="flex items-center gap-10 my-8">
+            <img id="weather-info" src="" alt="" width="100px" height="100px" />
             <div class="flex flex-col items-center">
-              <span id="weatherhere" class="text-white font-bold text-4xl">44 °C</span>
-              <span id="cityname" class="text-white">Dubai, AE</span>
+              <span
+                id="weatherhere"
+                class="text-white font-bold text-4xl"
+              ></span>
+              <span id="cityname" class="text-white"></span>
             </div>
           </div>
           <div class="flex items-center justify-between gap-10">
-          <div class="flex items-center gap-3">
-            <img src="images/humidity.png" alt="" width="50px" />
-            <div class="flex flex-col items-center">
-              <span id="humidity" class="text-yellow-100 font-bold text-2xl">50%</span>
-              <span class="text-white">Humidity</span>
+            <div class="flex items-center gap-3">
+              <img src="images/humidity.png" alt="" width="50px" />
+              <div class="flex flex-col items-center">
+                <span
+                  id="humidity"
+                  class="text-yellow-100 font-bold text-2xl"
+                ></span>
+                <span class="text-white">Humidity</span>
+              </div>
             </div>
-          </div>
-          <div class="flex items-center gap-3">
-            <img src="images/wind.png" alt="" width="50px" />
-            <div class="flex flex-col items-center">
-              <span id="wind" class="text-yellow-100 font-bold text-2xl">4 km/h</span>
-              <span class="text-white">wind speed</span>
+            <div class="flex items-center gap-3">
+              <img src="images/wind.png" alt="" width="50px" />
+              <div class="flex flex-col items-center">
+                <span
+                  id="wind"
+                  class="text-yellow-100 font-bold text-2xl"
+                ></span>
+                <span class="text-white">wind speed</span>
+              </div>
             </div>
-          </div>
           </div>
         </div>
       </div>
-      <div class="absolute bottom-5 left-[50%] -translate-x-[50%]">
-        <h1 class="text-yellow-300 font-bold tracking-wider" >design by omais ahmad</h1>
+      <div class="absolute bottom-20 left-[50%] -translate-x-[50%]">
+        <h1 class="text-yellow-300 font-bold tracking-wider">
+          design by omais ahmad
+        </h1>
       </div>
+      <p class="absolute bottom-5 left-5  text-yellow-600 font-bold text-2xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda hic ipsa quisquam!</p>
     </div>
     <script src="script.js"></script>
   </body>
