@@ -1,37 +1,52 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <title>calculator project </title>
+  <head>
+    <title>calculator project</title>
 
-  <link rel="stylesheet" href="indexr.css">
-</head>
-<body>
-  <div class="calculator">
-    
-      <input type="text" class="display" readonly >
-    
-    <div class="buttons">
-      <button class="button">AC</button>
-      <button class="button">%</button>
-      <button class="button">/</button>
-      
-      <button class="button">*</button>
-      <button class="button">-</button>
-      <button class="button">+</button>
-      <button class="button">9</button>
-      <button class="button">8</button>
-      <button class="button">7</button>
-      <button class="button">6</button>
-      <button class="button">5</button>
-      <button class="button">4</button>
-      <button class="button">3</button>
-      <button class="button">2</button>
-      <button class="button">1</button>
-      <button class="button">0</button>
-      <button class="button">.</button>
-      <button class="button">=</button>
-   
-  </div>
-  </div>
-</body>
+    <link rel="stylesheet" href="indexr.css" />
+  </head>
+  <body>
+    <div class="calculator">
+      <input type="text" class="display" readonly />
+
+      <div class="buttons">
+        <div class="row-3">
+          <button
+            class="button"
+            style="background: lightcoral; color: aliceblue"
+          >
+            AC
+          </button>
+          <button class="button">%</button>
+          <button
+            class="button"
+            style="background: rgb(207, 128, 24); color: aliceblue"
+          >
+            ÷
+          </button>
+        </div>
+        <div class="row-4">
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button" style="background: rgb(207, 128, 24); color: aliceblue">*</button>
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button" style="background: rgb(207, 128, 24); color: aliceblue">-</button>
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button" style="background: rgb(207, 128, 24); color: aliceblue">+</button>
+           </div>
+          <div class="last-row">
+            <button class="button">0</button>
+            <button class="button">.</button>
+            <button class="button" style="background: lightgreen;">=</button>
+         
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
 </html>
