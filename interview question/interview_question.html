@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>interview question</title>
+  </head>
+  <body>
+    <h1>interview question</h1>
+
+    <button id="btn"> <i>click me</i></button>
+    <script>
+      let button=document.querySelector('#btn');
+      button.addEventListener('click', function(hello){
+        console.log(hello.target)
+        
+      button.innerHTML="<h1><i>click me</i> </h2>;"
+      });
+
+
+      let sameBtn=document.querySelector('#btn');
+      button.addEventListener('click', function(hello){
+        console.log(hello.type)
+      })
+    </script>
+  </body>
+</html>
