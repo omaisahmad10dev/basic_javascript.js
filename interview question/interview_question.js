@@ -11,13 +11,49 @@ button.addEventListener("click", function (hello) {
   console.log(hello.type);
 });
 
+let formBtn = document.querySelector("#button");
+
+formBtn.addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  console.log("button submit");
+});
+
+let divElement = document.querySelector('#div');
+console.log(divElement.innerHTML);
+console.log(divElement.innerText);
 
 
+// NodeList
 
-  let formBtn=document.querySelector('#button')
+let students = document.querySelectorAll('.student');
 
-  formBtn.addEventListener("submit", function(event) {
-    event.preventDefault();
+console.log(students[0]);
+console.log(students[1]);
 
-    console.log("button submit");
-  });
+students.forEach(function(student) {
+  student.innerText = "Hello";
+});
+
+// classLIst.contains()
+
+let buttons=document.querySelector('.btn');
+
+if (buttons.classList.contains('btn')) {
+  buttons.innerText='active'
+  
+}
+
+// setAttribute()
+
+let image = document.querySelector("#myImage");
+let link = document.querySelector("#myLink");
+
+// Change image source
+image.setAttribute("src", "new.jpg");
+
+// Change image alt text
+image.setAttribute("alt", "New Image");
+
+// Change link destination
+link.setAttribute("href", "https://example.com");
