@@ -19,29 +19,27 @@ formBtn.addEventListener("submit", function (event) {
   console.log("button submit");
 });
 
-let divElement = document.querySelector('#div');
+let divElement = document.querySelector("#div");
 console.log(divElement.innerHTML);
 console.log(divElement.innerText);
 
-
 // NodeList
 
-let students = document.querySelectorAll('.student');
+let students = document.querySelectorAll(".student");
 
 console.log(students[0]);
 console.log(students[1]);
 
-students.forEach(function(student) {
+students.forEach(function (student) {
   student.innerText = "Hello";
 });
 
 // classLIst.contains()
 
-let buttons=document.querySelector('.btn');
+let buttons = document.querySelector(".btn");
 
-if (buttons.classList.contains('btn')) {
-  buttons.innerText='active'
-  
+if (buttons.classList.contains("btn")) {
+  buttons.innerText = "active";
 }
 
 // setAttribute()
@@ -57,3 +55,13 @@ image.setAttribute("alt", "New Image");
 
 // Change link destination
 link.setAttribute("href", "https://example.com");
+
+// inputElement.value
+
+let inputElement = document.querySelector(".inputElement");
+
+inputElement.value = "34";
+
+let addNumber = inputElement.value;
+let sumNumber = Number(addNumber);
+console.log(sumNumber + 1);
