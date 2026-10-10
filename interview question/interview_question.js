@@ -66,10 +66,17 @@ let addNumber = inputElement.value;
 let sumNumber = Number(addNumber);
 console.log(sumNumber + 1);
 
-let arr=[1,2,3,4,5,6];
+let arr = [1, 2, 3, 4, 5, 6];
 
-let result=arr.find((arr)=>{
-  return arr > 5 ;
-})
+let result = arr.find((arr) => {
+  return arr > 5;
+});
 
-console.log(result)
+console.log(result);
+
+let numbers = [1, 3, 4, 65, 6, 4];
+
+let results = numbers.filter((num) => {
+  return num > 3;
+});
+console.log(results);
