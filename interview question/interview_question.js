@@ -80,3 +80,10 @@ let results = numbers.filter((num) => {
   return num > 3;
 });
 console.log(results);
+
+
+function interviewQuestions() {
+  console.log('hello')
+  
+}
+interviewQuestions();
