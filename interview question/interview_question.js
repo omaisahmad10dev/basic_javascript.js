@@ -81,9 +81,31 @@ let results = numbers.filter((num) => {
 });
 console.log(results);
 
-
 function interviewQuestions() {
-  console.log('hello')
-  
+  console.log("hello");
 }
 interviewQuestions();
+
+// for loop
+let num = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+for (let i = 0; i < 10; i++) {
+  console.log(`2 * ${num[i]} = ${num[i] * 2}`);
+}
+
+// function parameters and arguments
+
+function great(name) {
+  console.log("hello ");
+  console.log(name);
+}
+
+great("omais");
+
+// return statements
+
+function greet(num) {
+  return 2 * num;
+ 
+}
+
+greet(3);
