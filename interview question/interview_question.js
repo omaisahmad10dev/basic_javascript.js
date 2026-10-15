@@ -105,7 +105,35 @@ great("omais");
 
 function greet(num) {
   return 2 * num;
- 
 }
 
 greet(3);
+
+// testing code
+
+function test(x) {
+  let result = x * 2;
+  return result;
+}
+console.log(test(3));
+
+function add(a, b) {
+  return a + b;
+}
+let answer = add(2, 3);
+console.log(answer);
+
+function testing(a, b) {
+  let x= a + b;
+  console.log(x)
+}
+testing(3,4);
+
+function test() {
+  console.log("Start");
+  return 5;
+}
+
+let x = test();
+console.log(x);
+console.log("End");
