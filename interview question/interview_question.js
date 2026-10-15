@@ -117,7 +117,7 @@ function test(x) {
 }
 console.log(test(3));
 
-function add(a, b) {
+function add(a, b) { 
   return a + b;
 }
 let answer = add(2, 3);
