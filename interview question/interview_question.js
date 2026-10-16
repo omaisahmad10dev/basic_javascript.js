@@ -111,29 +111,114 @@ greet(3);
 
 // testing code
 
-function test(x) {
-  let result = x * 2;
-  return result;
-}
-console.log(test(3));
+// function test(x) {
+//   let result = x * 2;
+//   return result;
+// }
+// console.log(test(3));
+// -----------------------------------------
+// function add(a, b) {
+//   return a + b;
+// }
+// let answer = add(2, 3);
+// console.log(answer);
+// -----------------------------------------
 
-function add(a, b) { 
-  return a + b;
-}
-let answer = add(2, 3);
-console.log(answer);
+// function testing(a, b) {
+//   let x= a + b;
+//   console.log(x)
+// }
+// testing(3,4);
+// -----------------------------------------
 
-function testing(a, b) {
-  let x= a + b;
-  console.log(x)
-}
-testing(3,4);
+// function test() {
+//   console.log("Start");
+//   return 5;
+// }
 
-function test() {
-  console.log("Start");
-  return 5;
+// let x = test();
+// console.log(x);
+// console.log("End");
+// -----------------------------------------
+// function check(a) {
+//   a=a+2;
+//   return a;
+// }
+
+// let e=5;
+// console.log(check(e))
+// console.log(e)
+// -----------------------------------------
+
+// function test(a) {
+//   return a + 2;
+// }
+
+// let x = 3;
+
+// x = test(x);
+// console.log(x);
+// -----------------------------------------
+// function test(a) {
+//   a=a+2;
+//   return a; 
+// }
+// let x=4;
+// console.log(test(x))
+// console.log(test(x))
+// console.log(x)
+// -----------------------------------------
+// function test(a) {
+//   return a+1;
+// }
+// let x=4;
+// x=test(x);
+// console.log(test(x))
+// console.log(x)
+// -----------------------------------------
+// function add(a,b) {
+//   return a+b;
+// }
+
+// let x=add(2,3);
+// x=add(x,4);
+// console.log(x);
+// -----------------------------------------
+
+function test(a) {
+  return a*3;  
 }
 
-let x = test();
-console.log(x);
-console.log("End");
+let x=3;
+let y=test(x);
+x=5;
+// console.log(y)
+// console.log(x)
+// -----------------------------------------
+
+// while loop
+
+// let i=2;
+
+// while (i<=6) {
+//   console.log(i)
+//   i =i+2;
+
+// }
+// -----------------------------------------
+
+// let a=10;
+
+// while (a>=1) {
+//   console.log(a);
+//   a =a-1;
+  
+// }
+// -----------------------------------------
+
+let q = 5;
+
+do {
+  console.log(q);
+  q++;
+} while (q < 5);
