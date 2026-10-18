@@ -233,10 +233,18 @@ x=5;
  
 // }
 // -----------------------------------------
-
+function variable(){
 for (let i = 1; i <= 5; i++) {
   if (i === 2 || i === 4) {
     continue;
   }
   console.log(i);
 }
+};
+
+
+function call(callBack) {
+  callBack();  
+}
+
+call(variable);
