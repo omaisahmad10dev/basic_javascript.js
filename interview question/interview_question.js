@@ -185,13 +185,13 @@ greet(3);
 // console.log(x);
 // -----------------------------------------
 
-function test(a) {
-  return a*3;  
-}
+// function test(a) {
+//   return a*3;  
+// }
 
-let x=3;
-let y=test(x);
-x=5;
+// let x=3;
+// let y=test(x);
+// x=5;
 // console.log(y)
 // console.log(x)
 // -----------------------------------------
@@ -233,18 +233,47 @@ x=5;
  
 // }
 // -----------------------------------------
-function variable(){
-for (let i = 1; i <= 5; i++) {
-  if (i === 2 || i === 4) {
-    continue;
-  }
-  console.log(i);
-}
-};
+// function variable(){
+// for (let i = 1; i <= 5; i++) {
+//   if (i === 2 || i === 4) {
+//     continue;
+//   }
+//   console.log(i);
+// }
+// };
 
 
-function call(callBack) {
-  callBack();  
-}
+// function call(callBack) {
+//   callBack();  
+// }
 
-call(variable);
+// call(variable);
+
+
+// // slice
+
+// let number=[10,20 ,30 ,40 , 50 ];
+
+// let arry =number.slice(2,3);
+// console.log(arry);
+// console.log(number);
+
+// // splice
+
+// let degit=[10,20,30,40,50];
+
+// let numeb=degit.splice(2,3);
+// console.log(numeb);
+
+// console.log(degit)
+
+// --------------------------------------
+// reduce
+
+let number=[2,3,4,5,6];
+
+let resul=number.reduce((total,num)=>{
+  return total+num;
+})
+
+console.log(resul);
