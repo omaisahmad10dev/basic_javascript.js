@@ -161,7 +161,7 @@ greet(3);
 // -----------------------------------------
 // function test(a) {
 //   a=a+2;
-//   return a; 
+//   return a;
 // }
 // let x=4;
 // console.log(test(x))
@@ -186,7 +186,7 @@ greet(3);
 // -----------------------------------------
 
 // function test(a) {
-//   return a*3;  
+//   return a*3;
 // }
 
 // let x=3;
@@ -212,7 +212,7 @@ greet(3);
 // while (a>=1) {
 //   console.log(a);
 //   a =a-1;
-  
+
 // }
 // -----------------------------------------
 
@@ -228,9 +228,9 @@ greet(3);
 // for (let i = 1; i <=2; i++){
 //   for (let j = 1; j <=3; j++) {
 //     console.log(i,j)
-    
+
 //   }
- 
+
 // }
 // -----------------------------------------
 // function variable(){
@@ -242,13 +242,11 @@ greet(3);
 // }
 // };
 
-
 // function call(callBack) {
-//   callBack();  
+//   callBack();
 // }
 
 // call(variable);
-
 
 // // slice
 
@@ -270,10 +268,84 @@ greet(3);
 // --------------------------------------
 // reduce
 
-let number=[2,3,4,5,6];
+// let number=[2,3,4,5,6];
 
-let resul=number.reduce((total,num)=>{
-  return total+num;
-})
+// let resul=number.reduce((total,num)=>{
+//   return total+num;
+// })
 
-console.log(resul);
+// console.log(resul);
+// ========================================
+// basic array problems
+
+let number = [10, 20, 30, 40];
+
+let sum = 0;
+
+for (let i = 0; i < number.length; i++) {
+  sum = sum + number[i];
+}
+
+console.log(sum);
+
+let array = [12, 45, 7, 89, 34];
+
+let largest = array[0];
+
+for (let i = 0; i < array.length; i++) {
+  if (array[i] > largest) {
+    largest = array[i];
+
+    // console.log(largest)
+  }
+}
+
+// Write your code here
+
+console.log(largest);
+
+let arra = [2, 5, 8, 11, 14, 17, 20];
+
+let count = 0;
+for (let i = 0; i < arra.length; i++) {
+  if (arra[i] % 2 === 0) {
+    count++;
+  }
+}
+// Write your code here
+
+console.log(count);
+
+// let student = {
+//   name: "Ali",
+//   age: 20,
+//   city: "Peshawar"
+// };
+
+// // Write your code here to remove city
+// delete student.city;
+// console.log(student)
+
+// +++++++++++++++++++++++++++++++++++++++++++++++
+// check specific property
+
+// let student = {
+//   name: "Ali",
+//   age: 20
+// };
+
+// console.log(student.hasOwnProperty("age"))
+
+// console.log(student["age"]);
+
+// =============================================
+// object destructuring
+let student={
+  name:"omais",
+  age:18,
+}
+student.age=29;
+
+let {name:property}=student;
+
+console.log(property);
