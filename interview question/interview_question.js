@@ -340,12 +340,26 @@ console.log(count);
 
 // =============================================
 // object destructuring
-let student={
-  name:"omais",
-  age:18,
-}
-student.age=29;
 
-let {name:property}=student;
+// let student={
+//   name:"omais",
+//   age:18,
+// }
+// student.age=29;
 
-console.log(property);
+// let {name:property}=student;
+
+// console.log(property);
+
+// ==========================================================
+
+let numbes=[1,2,3,4,5];
+
+console.log(numbes)
+console.log(...numbes)
+
+let practice=[10,20,30,40];
+console.log(...practice)
+let practiceArray=[...practice]
+console.log(practiceArray)
+
