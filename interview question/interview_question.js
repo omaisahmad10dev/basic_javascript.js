@@ -363,3 +363,34 @@ console.log(...practice)
 let practiceArray=[...practice]
 console.log(practiceArray)
 
+// ================================================
+// spread operator
+
+// let user = {
+//   name: "Ali",
+//   age: 20
+// };
+
+// let updatedUser = {
+//   ...user,
+//   age: 21
+// };
+
+// console.log(updatedUser);
+
+let user = {
+  name: "Ali",
+  address: {
+    city: "Lahore"
+  }
+};
+
+let copy = {
+  ...user,
+  address: { ...user.address }
+};
+
+copy.address.city = "Karachi";
+
+console.log(user.address.city);
+console.log(copy.address.city);
