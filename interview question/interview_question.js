@@ -342,14 +342,15 @@ console.log(count);
 // object destructuring
 
 // let student={
-//   name:"omais",
+//   name:"omais ahmad",
 //   age:18,
 // }
 // student.age=29;
 
-// let {name:property}=student;
+// let {name:property,age}=student;
 
 // console.log(property);
+// console.log(age);
 
 // ==========================================================
 
@@ -378,19 +379,46 @@ console.log(practiceArray)
 
 // console.log(updatedUser);
 
-let user = {
-  name: "Ali",
-  address: {
-    city: "Lahore"
-  }
+// let user = {
+//   name: "Ali",
+//   address: {
+//     city: "Lahore"
+//   }
+// };
+
+// let copy = {
+//   ...user,
+//   address: { ...user.address }
+// };
+
+// copy.address.city = "Karachi";
+
+// console.log(user.address.city);
+// console.log(copy.address.city);
+
+// ==========================================
+// rest operator
+
+let user={
+  name:"omais",
+  age:18,
+  class:"BS",
+  study:"software engeneering",
+}
+
+let {name, ...rest}=user;
+
+console.log(name);
+console.log(rest);
+
+// ===========================
+
+// DEFAULT PARAMETERS
+
+
+function greats(name="omais") {
+  console.log(name)
+  
 };
-
-let copy = {
-  ...user,
-  address: { ...user.address }
-};
-
-copy.address.city = "Karachi";
-
-console.log(user.address.city);
-console.log(copy.address.city);
+greats();
+greats("ali")
