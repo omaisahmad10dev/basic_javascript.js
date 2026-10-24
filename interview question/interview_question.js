@@ -379,34 +379,34 @@ console.log(practiceArray)
 
 // console.log(updatedUser);
 
-// let user = {
-//   name: "Ali",
-//   address: {
-//     city: "Lahore"
-//   }
-// };
+let user = {
+  name: "Ali",
+  address: {
+    city: "Lahore"
+  }
+};
 
-// let copy = {
-//   ...user,
-//   address: { ...user.address }
-// };
+let copy = {
+  ...user,
+  address: { ...user.address }
+};
 
-// copy.address.city = "Karachi";
+copy.address.city = "Karachi";
 
-// console.log(user.address.city);
-// console.log(copy.address.city);
+console.log(user.address.city);
+console.log(copy.address.city);
 
 // ==========================================
 // rest operator
 
-let user={
+let users={
   name:"omais",
   age:18,
   class:"BS",
   study:"software engeneering",
 }
 
-let {name, ...rest}=user;
+let {name, ...rest}=users;
 
 console.log(name);
 console.log(rest);
@@ -422,3 +422,26 @@ function greats(name="omais") {
 };
 greats();
 greats("ali")
+
+// optional changing
+
+let optional={
+  name:"numan",
+  age:undefined,
+  address:{
+    city:"swabi"
+  }
+};
+
+console.log(optional.address?.city)
+
+const userr = undefined;
+let city;
+
+if (userr && userr.address && userr.address.city) {
+  city = userr.address.city;
+} else {
+  city = undefined;
+}
+
+console.log(city);
