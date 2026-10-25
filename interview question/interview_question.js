@@ -354,15 +354,15 @@ console.log(count);
 
 // ==========================================================
 
-let numbes=[1,2,3,4,5];
+let numbes = [1, 2, 3, 4, 5];
 
-console.log(numbes)
-console.log(...numbes)
+console.log(numbes);
+console.log(...numbes);
 
-let practice=[10,20,30,40];
-console.log(...practice)
-let practiceArray=[...practice]
-console.log(practiceArray)
+let practice = [10, 20, 30, 40];
+console.log(...practice);
+let practiceArray = [...practice];
+console.log(practiceArray);
 
 // ================================================
 // spread operator
@@ -382,13 +382,13 @@ console.log(practiceArray)
 let user = {
   name: "Ali",
   address: {
-    city: "Lahore"
-  }
+    city: "Lahore",
+  },
 };
 
 let copy = {
   ...user,
-  address: { ...user.address }
+  address: { ...user.address },
 };
 
 copy.address.city = "Karachi";
@@ -399,14 +399,14 @@ console.log(copy.address.city);
 // ==========================================
 // rest operator
 
-let users={
-  name:"omais",
-  age:18,
-  class:"BS",
-  study:"software engeneering",
-}
+let users = {
+  name: "omais",
+  age: 18,
+  class: "BS",
+  study: "software engeneering",
+};
 
-let {name, ...rest}=users;
+let { name, ...rest } = users;
 
 console.log(name);
 console.log(rest);
@@ -415,33 +415,51 @@ console.log(rest);
 
 // DEFAULT PARAMETERS
 
-
-function greats(name="omais") {
-  console.log(name)
-  
-};
+function greats(name = "omais") {
+  console.log(name);
+}
 greats();
-greats("ali")
+greats("ali");
 
 // optional changing
 
-let optional={
-  name:"numan",
-  age:undefined,
-  address:{
-    city:"swabi"
-  }
+let optional = {
+  name: "numan",
+  age: undefined,
+  address: {
+    city: null,
+  },
 };
 
-console.log(optional.address?.city)
+console.log(optional.age?.city);
 
-const userr = undefined;
-let city;
+// console.log(city);
 
-if (userr && userr.address && userr.address.city) {
-  city = userr.address.city;
-} else {
-  city = undefined;
-}
+let names = undefined;
 
-console.log(city);
+let namesResult=names ?? "omais";
+
+console.log(namesResult)
+
+// =+++++++++++++++++++++++++++++++++++++++++
+// ternery operator
+
+let temperature=46;
+
+let check=temperature >=30 ? "hot":"cool";
+console.log(check)
+
+// ++++++++++++++++++++++++++++++++++++
+// spread operator again
+
+let spread=[1,2,3,5,6,7];
+let operator=[6];
+
+let output={...spread,...operator}
+console.log(output);
+
+
+let arr1=[1,2,3,5,6,4];
+let arr2=[2,4,6,7,9,0,8];
+let outputCheck=arr1.filter(num=> !spread.includes(num));
+console.log(outputCheck)
