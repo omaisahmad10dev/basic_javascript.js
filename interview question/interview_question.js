@@ -437,29 +437,42 @@ console.log(optional.age?.city);
 
 let names = undefined;
 
-let namesResult=names ?? "omais";
+let namesResult = names ?? "omais";
 
-console.log(namesResult)
+console.log(namesResult);
 
 // =+++++++++++++++++++++++++++++++++++++++++
 // ternery operator
 
-let temperature=46;
+let temperature = 46;
 
-let check=temperature >=30 ? "hot":"cool";
-console.log(check)
+let check = temperature >= 30 ? "hot" : "cool";
+console.log(check);
 
 // ++++++++++++++++++++++++++++++++++++
 // spread operator again
 
-let spread=[1,2,3,5,6,7];
-let operator=[6];
+let spread = [1, 2, 3, 5, 6, 7];
+let operator = [6];
 
-let output={...spread,...operator}
+let output = { ...spread, ...operator };
 console.log(output);
 
+let arr1 = [1, 2, 3, 5, 6, 4, 3, 5];
+let arr2 = [2, 4, 6, 7, 9, 0, 8];
+let outputCheck = arr1.filter((num) => !arr2.includes(num));
+console.log(outputCheck);
 
-let arr1=[1,2,3,5,6,4];
-let arr2=[2,4,6,7,9,0,8];
-let outputCheck=arr1.filter(num=> !spread.includes(num));
-console.log(outputCheck)
+// file exporting and importing
+
+export function add(a, b) {
+  return a + b;
+}
+
+// Creating elements
+const heading = document.createElement("h1");
+heading.textContent = "Hello";
+
+document.body.appendChild(heading);
+
+// document.body.innerHTML='<h1>hello</h1>';
