@@ -476,3 +476,19 @@ heading.textContent = "Hello";
 document.body.appendChild(heading);
 
 // document.body.innerHTML='<h1>hello</h1>';
+
+const textBold=document.createElement("b");
+
+textBold.textContent="hello";
+
+document.body.appendChild(textBold);
+
+// ++++++++++++++++++++++++++++++++++++++++
+
+// basic validation
+
+const namess = document.querySelector("#name");
+
+if (namess.value.trim() === "") {
+  console.log("Name is required");
+}
