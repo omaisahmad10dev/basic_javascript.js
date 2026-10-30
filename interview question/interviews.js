@@ -1,5 +1,5 @@
 // file exporting and importing
 
-import {add} from "./interview_question.js"
+// import { add} from "./interview_question.js"
 
-console.log(add(2,3));
+// console.log(add(2,3));
