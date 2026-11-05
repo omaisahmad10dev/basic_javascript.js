@@ -1,0 +1,13 @@
+ body { font-family: Arial, sans-serif; margin: 20px; background-color: #f4f4f4; }
+
+    .dashboard { display: flex; gap: 40px; }
+
+    .menu-section, .cart-section { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); width: 45%; }
+
+    .food-item, .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+
+    button { background-color: #ff4757; color: white; border: none; padding: 8px 12px; border-radius: 4px; cursor: pointer; }
+
+    button:hover { background-color: #e84118; }
+    
+    .bill-box { margin-top: 20px; padding-top: 15px; border-top: 2px dashed #ccc; }

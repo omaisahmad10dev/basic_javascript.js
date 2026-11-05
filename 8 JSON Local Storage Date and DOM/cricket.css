@@ -1,0 +1,42 @@
+
+
+
+body{
+      text-align: center;
+    }
+    
+       
+      .choice-image{
+        height: 75px;
+        border: none;
+
+        }
+    #Bat{
+      
+        height: 100px;
+        width: 100px;
+        border: none;
+        margin: 7;
+        background-color: lightgreen;
+        border-radius: 50px;
+         
+    }
+    #Ball{
+      
+        height: 100px;
+        width: 100px;     
+        border: none;
+        margin: 7px;
+         background-color: lightgreen;
+        border-radius: 50px;
+        
+    }
+    #Stump{
+      
+        height: 100px;
+        width: 100px;       
+        border: none;
+        margin: 7px;
+         background-color: lightgreen;
+        border-radius: 50px;
+    }

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student ID Finder"</title>
+</head>
+<body>
+  <h1>Student ID Finder</h1>
+  <script>
+    let StudentIDFinder=[['101',"waseem"],['102',"yaman"],['103',"omais"]];
+
+    let studentDirectory=Object.fromEntries(StudentIDFinder);
+    console.log(studentDirectory);
+    console.log(studentDirectory[101]);
+
+
+    
+   for (let i = 0; i <=3; i++) {
+    let lineStar=[];
+    
+
+    for (let j = 0; j <=4; j++) {
+      lineStar.push("*");
+      
+    }
+    console.log(lineStar.join(" "));
+    
+   }
+
+  </script>
+  
+</body>
+</html>

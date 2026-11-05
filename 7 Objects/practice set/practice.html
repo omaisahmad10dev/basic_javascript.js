@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>practice set</title>
+</head>
+<body>
+  
+  <script>
+
+      let product ={
+          name: 'myntra',
+          size: 's',
+          fit: 'slim fit',
+          'divelary-time':'same time on divelary',
+      };
+
+    // let copyproduct=product;
+    //   console.log(product);
+    // copyproduct.size = 'M';
+    // console.log(product);
+    // copyproduct.fit='regular fit';
+    // console.log(product);
+
+
+    // console.log(product['divelary-time']);
+
+
+
+    // let obj={
+    //   messege:'Good job',
+    //   status:'complete',
+    // };
+
+    // console.log(obj);
+
+
+// DESTRUCTORS
+    // let {messege,status}=obj;
+
+    // console.log(messege);
+    // console.log(status);
+
+
+
+    function identicalproduct(product1 , product2)
+    {
+      if(typeof product1 !== 'object' || typeof product2 !== 'object' ){
+        console.warn('parameter was passed not an object');
+        
+        return false;
+      }
+      if(product1==product2){
+        return true;
+      }
+      if (product1.name===product2.name && product1.size===product2.size && product1.fit===product2.fit ){
+        return true;
+      }else{
+        return false;
+      }
+    }
+    
+
+   let  product2 ={
+          name: 'myntra',
+          size: 'M',
+          fit: 'slim fit',
+          'divelary-time':'same time on divelary',
+      };
+
+      let  product3 ={
+          name: 'myntra',
+          size: 'M',
+          fit: 'slim fit',
+          'divelary-time':'same time on divelary',
+      };
+
+
+      console.log(identicalproduct(product, ''));
+      console.log(identicalproduct(product, product));
+      
+      
+      console.log(identicalproduct(product, product2));
+      console.log(identicalproduct(product3, product2));
+      
+      
+      console.log(identicalproduct(product2, product3));
+      
+  </script>
+</body>
+</html>
