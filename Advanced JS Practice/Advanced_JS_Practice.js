@@ -165,7 +165,7 @@ let orderSummary = orders.map((order) => {
     isCompleted: isCompleted,
   };
 });
-console.log(orderSummary);
+// console.log(orderSummary);
 
 let isAdult = 20 >= 18;
 // console.log(isAdult);
@@ -262,7 +262,7 @@ let allSummary = orderss.filter((order) => {
  )  
 });
 
-console.log(allSummary)
+// console.log(allSummary)
 
 
 // find concept 
@@ -336,8 +336,70 @@ let allData=data.find((order)=>{
       order.isPremium && order.status==="delivered" && order.payment==="paid" &&
       order.items.filter((atLeast)=>{
         return atLeast.category==="electronics" 
-      }).length>=2
+      }).length>=2 &&
 
+      order.items.every((stock)=>{
+      return  stock.inStock
+      })&&
+
+       order.reviews.every((atLeast)=>{
+        return atLeast>=4
+      })
   )
 })
-console.log(allData);
+// console.log(allData);
+
+
+
+
+
+
+// +++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// sort()
+
+let products = [
+  { id: 101, name: "Laptop", price: 80000, rating: 4.5 },
+  { id: 102, name: "Mouse", price: 1500, rating: 4.2 },
+  { id: 103, name: "Phone", price: 50000, rating: 4.8 },
+  { id: 104, name: "Keyboard", price: 3000, rating: 4.1 },
+  { id: 105, name: "Monitor", price: 25000, rating: 4.5 },
+  { id: 106, name: "Headphones", price: 5000, rating: 4.8 },
+  { id: 107, name: "Tablet", price: 30000, rating: 4.3 }
+];
+
+let wishlist = [103, 106, 101, 105];
+
+let productSummary=products.sort((a,b)=>{
+  return a.rating === b.rating
+  ? (a.price === b.price
+      ? a.id - b.id
+      : a.price - b.price)
+  : b.rating - a.rating;
+})  
+// console.log(productSummary);
+
+// ==================================================================
+// this keywords concept
+
+let cart = {
+  userName: "Ali",
+  items: [
+    { name: "Laptop", price: 80000, quantity: 1 },
+    { name: "Mouse", price: 1500, quantity: 2 },
+    { name: "Keyboard", price: 3000, quantity: 1 }
+  ],
+
+  showUser() {
+    console.log(this.userName);
+  },
+
+  calculateTotal() {
+    console.log(this.items);
+    let totalPrice=this.items.reduce((total,item)=>{
+     return  total+(item.price*item.quantity);
+    },0)
+    return totalPrice;
+  }
+};
+
+console.log(cart.calculateTotal());
