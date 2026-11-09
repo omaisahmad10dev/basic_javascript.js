@@ -247,27 +247,24 @@ let orderss = [
 ];
 
 let allSummary = orderss.filter((order) => {
- return(
+  return (
     order.isPremium &&
-   order.status==="delivered"  && 
-   order.payment==="paid" && 
-  
-  order.items.some((item)=>{
-   return item.category==="electronics" && item.price>20000  
-   }) &&
-   order.items.every((stock)=>{
-    return stock.inStock;
-  })
-  
- )  
+    order.status === "delivered" &&
+    order.payment === "paid" &&
+    order.items.some((item) => {
+      return item.category === "electronics" && item.price > 20000;
+    }) &&
+    order.items.every((stock) => {
+      return stock.inStock;
+    })
+  );
 });
 
 // console.log(allSummary)
 
+// find concept
 
-// find concept 
-
-let  data= [
+let data = [
   {
     orderId: 201,
     customer: "Ali",
@@ -275,10 +272,22 @@ let  data= [
     status: "delivered",
     payment: "paid",
     items: [
-      { name: "Laptop", category: "electronics", price: 80000, quantity: 1, inStock: true },
-      { name: "Mouse", category: "electronics", price: 2000, quantity: 2, inStock: true }
+      {
+        name: "Laptop",
+        category: "electronics",
+        price: 80000,
+        quantity: 1,
+        inStock: true,
+      },
+      {
+        name: "Mouse",
+        category: "electronics",
+        price: 2000,
+        quantity: 2,
+        inStock: true,
+      },
     ],
-    reviews: [5, 4, 5]
+    reviews: [5, 4, 5],
   },
   {
     orderId: 202,
@@ -287,10 +296,22 @@ let  data= [
     status: "delivered",
     payment: "paid",
     items: [
-      { name: "Phone", category: "electronics", price: 50000, quantity: 1, inStock: true },
-      { name: "Shoes", category: "fashion", price: 4000, quantity: 1, inStock: true }
+      {
+        name: "Phone",
+        category: "electronics",
+        price: 50000,
+        quantity: 1,
+        inStock: true,
+      },
+      {
+        name: "Shoes",
+        category: "fashion",
+        price: 4000,
+        quantity: 1,
+        inStock: true,
+      },
     ],
-    reviews: [5, 5, 5]
+    reviews: [5, 5, 5],
   },
   {
     orderId: 203,
@@ -299,10 +320,22 @@ let  data= [
     status: "delivered",
     payment: "paid",
     items: [
-      { name: "Laptop", category: "electronics", price: 90000, quantity: 1, inStock: true },
-      { name: "Keyboard", category: "electronics", price: 3000, quantity: 1, inStock: true }
+      {
+        name: "Laptop",
+        category: "electronics",
+        price: 90000,
+        quantity: 1,
+        inStock: true,
+      },
+      {
+        name: "Keyboard",
+        category: "electronics",
+        price: 3000,
+        quantity: 1,
+        inStock: true,
+      },
     ],
-    reviews: [4, 5, 5]
+    reviews: [4, 5, 5],
   },
   {
     orderId: 204,
@@ -311,10 +344,22 @@ let  data= [
     status: "pending",
     payment: "paid",
     items: [
-      { name: "Monitor", category: "electronics", price: 30000, quantity: 1, inStock: true },
-      { name: "Mouse", category: "electronics", price: 1500, quantity: 1, inStock: true }
+      {
+        name: "Monitor",
+        category: "electronics",
+        price: 30000,
+        quantity: 1,
+        inStock: true,
+      },
+      {
+        name: "Mouse",
+        category: "electronics",
+        price: 1500,
+        quantity: 1,
+        inStock: true,
+      },
     ],
-    reviews: [5, 5, 4]
+    reviews: [5, 5, 4],
   },
   {
     orderId: 205,
@@ -323,36 +368,42 @@ let  data= [
     status: "delivered",
     payment: "paid",
     items: [
-      { name: "Laptop", category: "electronics", price: 100000, quantity: 1, inStock: true },
-      { name: "Monitor", category: "electronics", price: 25000, quantity: 1, inStock: true }
+      {
+        name: "Laptop",
+        category: "electronics",
+        price: 100000,
+        quantity: 1,
+        inStock: true,
+      },
+      {
+        name: "Monitor",
+        category: "electronics",
+        price: 25000,
+        quantity: 1,
+        inStock: true,
+      },
     ],
-    reviews: [5, 5, 5]
-  }
+    reviews: [5, 5, 5],
+  },
 ];
 
-
-let allData=data.find((order)=>{
-  return(
-      order.isPremium && order.status==="delivered" && order.payment==="paid" &&
-      order.items.filter((atLeast)=>{
-        return atLeast.category==="electronics" 
-      }).length>=2 &&
-
-      order.items.every((stock)=>{
-      return  stock.inStock
-      })&&
-
-       order.reviews.every((atLeast)=>{
-        return atLeast>=4
-      })
-  )
-})
+let allData = data.find((order) => {
+  return (
+    order.isPremium &&
+    order.status === "delivered" &&
+    order.payment === "paid" &&
+    order.items.filter((atLeast) => {
+      return atLeast.category === "electronics";
+    }).length >= 2 &&
+    order.items.every((stock) => {
+      return stock.inStock;
+    }) &&
+    order.reviews.every((atLeast) => {
+      return atLeast >= 4;
+    })
+  );
+});
 // console.log(allData);
-
-
-
-
-
 
 // +++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // sort()
@@ -364,18 +415,18 @@ let products = [
   { id: 104, name: "Keyboard", price: 3000, rating: 4.1 },
   { id: 105, name: "Monitor", price: 25000, rating: 4.5 },
   { id: 106, name: "Headphones", price: 5000, rating: 4.8 },
-  { id: 107, name: "Tablet", price: 30000, rating: 4.3 }
+  { id: 107, name: "Tablet", price: 30000, rating: 4.3 },
 ];
 
 let wishlist = [103, 106, 101, 105];
 
-let productSummary=products.sort((a,b)=>{
+let productSummary = products.sort((a, b) => {
   return a.rating === b.rating
-  ? (a.price === b.price
+    ? a.price === b.price
       ? a.id - b.id
-      : a.price - b.price)
-  : b.rating - a.rating;
-})  
+      : a.price - b.price
+    : b.rating - a.rating;
+});
 // console.log(productSummary);
 
 // ==================================================================
@@ -386,7 +437,7 @@ let cart = {
   items: [
     { name: "Laptop", price: 80000, quantity: 1 },
     { name: "Mouse", price: 1500, quantity: 2 },
-    { name: "Keyboard", price: 3000, quantity: 1 }
+    { name: "Keyboard", price: 3000, quantity: 1 },
   ],
 
   showUser() {
@@ -395,11 +446,111 @@ let cart = {
 
   calculateTotal() {
     console.log(this.items);
-    let totalPrice=this.items.reduce((total,item)=>{
-     return  total+(item.price*item.quantity);
-    },0)
+    let totalPrice = this.items.reduce((total, item) => {
+      return total + item.price * item.quantity;
+    }, 0);
     return totalPrice;
-  }
+  },
 };
 
-console.log(cart.calculateTotal());
+// console.log(cart.calculateTotal());
+// ==================================================================
+// dot and bracket notaion
+
+let student = {
+  name: "Ali",
+  subjects: {
+    JavaScript: 85,
+    Math: 90,
+  },
+  "total-marks": 175,
+  101: {
+    result: "Pass",
+  },
+};
+
+let key = "JavaScript";
+
+// console.log(student.name);
+
+// console.log(student.subjects["JavaScript"]);
+// console.log(student["total-marks"]);
+// console.log(student[101].result);
+// // =================================================================
+
+let company = {
+  name: "Google",
+  employees: [
+    { id: 101, "full-name": "Ali Khan", salary: 50000 },
+    { id: 102, "full-name": "Ahmed Khan", salary: 60000 },
+  ],
+};
+
+let employeeIndex = 1;
+let property = "full-name";
+
+// console.log(company.employees[employeeIndex]);
+
+// console.log(company.employees[employeeIndex][property]);
+
+// ==================================================================
+// json concept ?
+
+let order = {
+  orderId: 501,
+  customer: {
+    name: "Ali",
+    isPremium: true,
+  },
+  items: [
+    { name: "Laptop", price: 80000, quantity: 1 },
+    { name: "Mouse", price: 1500, quantity: 2 },
+  ],
+  status: "delivered",
+};
+
+// let storage = JSON.stringify(order);
+// let storeData=localStorage.setItem("myOrder" , storage);
+
+// let getData=localStorage.getItem("myOrder");
+
+// let getJson=JSON.parse(getData);
+// // console.log(getJson);
+
+// console.log(getJson.customer.name);
+
+// console.log(getJson.customer.isPremium);
+
+// let storage = JSON.stringify(order);
+// let getJson = JSON.parse(storage);
+
+// console.log(order === getJson);
+// console.log( getJson.items[0]);
+
+// ================================================================
+// event listner concept
+
+let userName = document.querySelector("#username");
+let result = document.querySelector("#result");
+
+// userName.addEventListener("input", () => {
+//   result.innerText = userName.value;
+// });
+
+userName.addEventListener("change", () => {
+  result.innerText = userName.value;
+});
+
+
+let name = document.querySelector("#name");
+let btn = document.querySelector("#btn");
+let results = document.querySelector("#result");
+
+// btn.addEventListener("click", function() {
+//   results.innerText = name.value;
+//   console.log(event)
+// });
+
+document.addEventListener("click", function(event) {
+  console.log(event.target.tagName);
+});
