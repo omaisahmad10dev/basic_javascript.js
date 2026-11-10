@@ -541,7 +541,6 @@ userName.addEventListener("change", () => {
   result.innerText = userName.value;
 });
 
-
 let name = document.querySelector("#name");
 let btn = document.querySelector("#btn");
 let results = document.querySelector("#result");
@@ -551,6 +550,40 @@ let results = document.querySelector("#result");
 //   console.log(event)
 // });
 
-document.addEventListener("click", function(event) {
+document.addEventListener("click", function (event) {
   console.log(event.target.tagName);
 });
+
+// =============================================================
+// sessionStorage
+
+// let storeData = sessionStorage.setItem("studentName", "Ali");
+// let ageData = sessionStorage.setItem("studentAge", 20);
+
+// let getData = sessionStorage.getItem("studentName");
+// console.log(getData);
+// let updateData = sessionStorage.setItem("studentName","ahmad");
+
+// let deleteDate=sessionStorage.removeItem("studentAge");
+
+// console.log(sessionStorage.length);
+
+// ===============================================================
+// method and propertry concept
+
+let studentRecord=[
+    {name:"Ali",marks:85,status:"pass"},
+    {name:"Ahmad",marks:35,status:"pass"},
+    {name:"sara",marks:92,status:"pass"},
+    {name:"hamza",marks:20,status:"fail"},
+    {name:"ayesha",marks:65,status:"pass"},
+];
+
+let totalStudent=studentRecord.length;
+console.log(totalStudent);
+
+let passStudent=studentRecord.filter((student)=>{
+     return student.status==="pass";
+})
+console.log(passStudent);
+
