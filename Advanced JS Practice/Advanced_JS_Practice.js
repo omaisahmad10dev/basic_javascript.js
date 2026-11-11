@@ -76,6 +76,7 @@ students.forEach((num) => {
     highestMArks = num.marks;
     topper = num.name;
   }
+  
   // console.log(studentName);
   // console.log(passedStudent);
 
@@ -587,3 +588,24 @@ let passStudent=studentRecord.filter((student)=>{
 })
 console.log(passStudent);
 
+let passStudentName=passStudent.map((pass)=>{
+    return pass.name;
+})
+console.log(passStudentName);
+
+
+let highestMark=studentRecord.reduce((total,high)=>{
+  return total.marks>high.marks ? total:high;
+ 
+})
+console.log(highestMark)
+
+let studentCheck=studentRecord.some((arr)=>{
+  return arr.marks>90;
+})
+console.log(studentCheck)
+
+let sortMarks=studentRecord.sort((arry,arr)=>{
+  return arr.marks-arry.marks;
+})
+console.log(sortMarks);
