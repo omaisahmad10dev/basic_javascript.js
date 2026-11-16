@@ -239,3 +239,61 @@ for(let i=0; i<numbe.length; i++){
 
 }
 console.log(newArray);
+
+
+async function getStudent() {
+   try {
+    // console.log("student Data received")
+    throw new Error("Failed to get student")
+   } catch (error) {
+    console.log("student data reject")
+    
+   }
+  
+}
+
+getStudent();
+
+
+class BankAccount {
+  #balance = 1000;
+
+  deposit(amount) {
+    this.#balance =this.#balance + amount;
+  }
+
+  getBalance() {
+    return this.#balance;
+  }
+}
+
+let account = new BankAccount();
+
+account.deposit(500);
+
+console.log(account.getBalance());
+
+// ==============================================
+// inheritance concept 
+
+class student {
+    studentInfo(){
+     console.log("student name omais ahmad");
+    }
+}
+
+class studentClassInhirit extends student {
+  
+}
+
+let stu=new studentClassInhirit();
+
+stu.studentInfo();
+
+
+
+function calculate(a,b) {
+  let result = a+b;
+  console.log(result);
+}
+calculate(10,23);
