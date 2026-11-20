@@ -79,3 +79,25 @@ for (let i = 0; i < userID.length; i++) {
     
 }
 console.log(uniqueIDs);
+
+
+let allProducts = ["Shoes", "Watch", "Shirt", "Perfume", "Bag", "Cap"];
+let soldOut = ["Watch", "Bag"];
+let availableProducts = [];
+
+for (let i = 0; i < allProducts.length; i++) {
+  let currentItem = allProducts[i];
+  let isSold = false; 
+  for (let j = 0; j < soldOut.length; j++) {
+    if (currentItem === soldOut[j]) {
+      isSold = true; // 
+      break;
+    }
+  }
+
+  if (!isSold) {
+    availableProducts.push(currentItem);
+  }
+}
+
+console.log(availableProducts);
